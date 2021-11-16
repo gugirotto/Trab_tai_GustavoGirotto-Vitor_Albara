@@ -21,7 +21,7 @@ class Carro_con extends Controller
         if($c->session()->get('user_id')==""){
             return redirect('/login');
             }
-            else{ return view("Create_carro");}
+            else{ return view("create_carro");}
        
     }
 

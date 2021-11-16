@@ -31,7 +31,7 @@ class Serviço_con extends Controller
         if ($c->session()->get('user_id') == "") {
             return redirect('/login');
         } else {
-            return view('Create_serviço')->with(['mecanico' => $mecanico, 'usuario' => $login, 'veiculo' => $veiculo]);
+            return view('create_serviço')->with(['mecanico' => $mecanico, 'usuario' => $login, 'veiculo' => $veiculo]);
         }
     }
     public function create(Request $c)

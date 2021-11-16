@@ -22,7 +22,7 @@ class Mecanico_con extends Controller
         if ($c->session()->get('user_id') == "") {
             return redirect('/login');
         } else {
-            return view("Create_mecanico");
+            return view("create_mecanico");
         }
     }
 
