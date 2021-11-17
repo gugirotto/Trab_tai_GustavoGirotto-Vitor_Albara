@@ -63,8 +63,10 @@
                     <tbody>
                         <?php foreach ($data as $p) : ?>
                             @php
-                            !empty($p->nome_arquivo)?$nome_arquivo= $p->nome_arquivo : $nome_arquivo = "sem_imagem.jpg"
+                            !empty($p->nome_arquivo)?$nome_arquivo= $p->nome_arquivo : ($nome_arquivo = "sem_imagem.jpg");
                             @endphp
+                            
+                            
                             <tr>
                                 <td><?= $p->id; ?></td>
                                 <td> <img src="/storage/imagem/{{$nome_arquivo}}" width="200px"></td>
