@@ -182,7 +182,8 @@ class Mecanico_con extends Controller
        
         Mail::to('gustavo.g1@aluno.ifsc.edu.br')-> send(new sendMailMec($fetch_dataa));
         $fetch_data = App\Models\Mecanico::paginate(10);
-        $capsulecar = array('data' => $fetch_data);
+        $chart = new VeiculoChart();
+        $capsulecar = array('data' => $fetch_data , 'chartCarro'=>$chart->build());
         if($c->session()->get('user_id')==""){
             return redirect('/login');
             }else{
